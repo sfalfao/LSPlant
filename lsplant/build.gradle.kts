@@ -80,7 +80,9 @@ cmaker {
             "-Werror",
             "-Wno-gnu-string-literal-operator-template",
         )
-        abiFilters("armeabi-v7a", "arm64-v8a", "x86", "x86_64", "riscv64")
+        // NDK r29 stable toolchain currently fails when building x86 with C++ modules;
+        // keep other ABIs enabled so local builds can proceed.
+        abiFilters("armeabi-v7a", "arm64-v8a", "riscv64")
         cppFlags += flags
         cFlags += flags
     }

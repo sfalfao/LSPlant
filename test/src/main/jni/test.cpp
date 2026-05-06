@@ -5,7 +5,7 @@
 #include "logging.h"
 
 import lsplant;
-import lsparself;
+#include "external/lsparself/include/lsparself.h"
 
 #define _uintval(p)               reinterpret_cast<uintptr_t>(p)
 #define _ptr(p)                   reinterpret_cast<void *>(p)
